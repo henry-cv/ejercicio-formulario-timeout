@@ -1,0 +1,263 @@
+{
+  "id": "efd6ff60-a298-4821-93dd-7665bbc9e946",
+  "version": "2.0",
+  "name": "form_timeout",
+  "url": "http://127.0.0.1:5500",
+  "tests": [{
+    "id": "4e8ed755-be37-4f7e-b8be-d28cdae1f4f8",
+    "name": "positivo_shanna",
+    "commands": [{
+      "id": "602f6427-5c12-4f10-b832-688122fff655",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f24dc0eb-1339-458a-8e0b-8eeb373a41b2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1430x829",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d637d66-c04f-4e4d-ab3b-9fde044494c5",
+      "comment": "",
+      "command": "click",
+      "target": "id=email-input",
+      "targets": [
+        ["id=email-input", "id"],
+        ["name=email", "name"],
+        ["css=#email-input", "css:finder"],
+        ["xpath=//input[@id='email-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe7670b9-7c37-4c81-b9ab-c4b875c0069e",
+      "comment": "",
+      "command": "type",
+      "target": "id=email-input",
+      "targets": [
+        ["id=email-input", "id"],
+        ["name=email", "name"],
+        ["css=#email-input", "css:finder"],
+        ["xpath=//input[@id='email-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "shanna@melissa.tv"
+    }, {
+      "id": "37dd5148-03f9-4206-83f3-2c55143fb2c8",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-input",
+      "targets": [
+        ["id=password-input", "id"],
+        ["name=password", "name"],
+        ["css=#password-input", "css:finder"],
+        ["xpath=//input[@id='password-input']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b0c0827-cf72-4ed4-9d24-bea8e5800b3f",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-input",
+      "targets": [
+        ["id=password-input", "id"],
+        ["name=password", "name"],
+        ["css=#password-input", "css:finder"],
+        ["xpath=//input[@id='password-input']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f74bf426-c8b8-4298-9b46-588cf3350051",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-input",
+      "targets": [
+        ["id=password-input", "id"],
+        ["name=password", "name"],
+        ["css=#password-input", "css:finder"],
+        ["xpath=//input[@id='password-input']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Ervin345"
+    }, {
+      "id": "d85967dc-67cd-47f1-8400-a3e4025d2762",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-btn",
+      "targets": [
+        ["css=.login-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5fd20978-e0dc-4f29-bc19-560d5e1c8b1e",
+    "name": "negativo_shanna_bad_password",
+    "commands": [{
+      "id": "2d21430e-f2b0-4614-b27a-ef4f9a54ae38",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e22f522b-68e2-4e05-ab21-3c37e3c087c9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1430x829",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b1de521-5cbd-4ea9-ba21-2804c88a585a",
+      "comment": "",
+      "command": "click",
+      "target": "id=email-input",
+      "targets": [
+        ["id=email-input", "id"],
+        ["name=email", "name"],
+        ["css=#email-input", "css:finder"],
+        ["xpath=//input[@id='email-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24ecb798-5e33-4202-b367-2d63fb93a96b",
+      "comment": "",
+      "command": "type",
+      "target": "id=email-input",
+      "targets": [
+        ["id=email-input", "id"],
+        ["name=email", "name"],
+        ["css=#email-input", "css:finder"],
+        ["xpath=//input[@id='email-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "shanna@melissa.tv"
+    }, {
+      "id": "e57ec6b7-9f63-4320-97bf-cf31801d14bd",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-input",
+      "targets": [
+        ["id=password-input", "id"],
+        ["name=password", "name"],
+        ["css=#password-input", "css:finder"],
+        ["xpath=//input[@id='password-input']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7a0cd27-352a-4d6c-b6f1-27320ffec81a",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-input",
+      "targets": [
+        ["id=password-input", "id"],
+        ["name=password", "name"],
+        ["css=#password-input", "css:finder"],
+        ["xpath=//input[@id='password-input']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "clave123"
+    }, {
+      "id": "d9de6dd0-81b6-4105-8eb5-10e995dfdb52",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-btn",
+      "targets": [
+        ["css=.login-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ab1b4c4f-441c-4a76-b8e8-66dfe3e63e5c",
+    "name": "negativo_bad_user_pass",
+    "commands": [{
+      "id": "fb29611a-b397-4330-9f19-28cbe9557436",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97b82279-0f32-4f74-ae43-0ba447db57fc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1430x829",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6754cac2-8b21-4816-8af8-393142b03b17",
+      "comment": "",
+      "command": "click",
+      "target": "id=email-input",
+      "targets": [
+        ["id=email-input", "id"],
+        ["name=email", "name"],
+        ["css=#email-input", "css:finder"],
+        ["xpath=//input[@id='email-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7c96774-1839-46ec-a449-83a7c5e6763b",
+      "comment": "",
+      "command": "type",
+      "target": "id=email-input",
+      "targets": [
+        ["id=email-input", "id"],
+        ["name=email", "name"],
+        ["css=#email-input", "css:finder"],
+        ["xpath=//input[@id='email-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "user@msn.com"
+    }, {
+      "id": "1a69447f-d832-413f-a86c-d876c00494e1",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-input",
+      "targets": [
+        ["id=password-input", "id"],
+        ["name=password", "name"],
+        ["css=#password-input", "css:finder"],
+        ["xpath=//input[@id='password-input']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "clave123"
+    }, {
+      "id": "70e5b8be-8357-48af-9697-41d7341c9250",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-btn",
+      "targets": [
+        ["css=.login-btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9d581bfa-e413-4af4-ad6c-139fc7f8668f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4e8ed755-be37-4f7e-b8be-d28cdae1f4f8"]
+  }],
+  "urls": ["http://127.0.0.1:5500/"],
+  "plugins": []
+}

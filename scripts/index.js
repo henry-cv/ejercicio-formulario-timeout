@@ -68,12 +68,12 @@ TIPS:
 
    ¡Manos a la obra!
  */
-const leerEmail = function (email) {
+function leerEmail(email) {
   return /^[\w \_\.]{4,}@[a-z]{3,}\.[a-z]{2,3}$/.test(email);
-};
-const leerClave = function (password) {
+}
+function leerClave(password) {
   return password.length > 4;
-};
+}
 const $email = document.getElementById("email-input");
 $email.setAttribute("autocomplete", true);
 $email.setAttribute("required", true);
@@ -85,32 +85,77 @@ const loader = document.getElementById("loader");
 const divErrores = document.getElementById("error-container");
 const btnLogin = document.querySelector("button.login-btn");
 
-btnLogin.addEventListener("click", (e) => {
-  e.preventDefault();
+btnLogin.addEventListener("click", () => {
   const errores = [];
-  if (!leerEmail($email.value)) {
-    //alert(`Email incorrecto: ${$email.value}`);
-    errores.push(`Email incorrecto:`);
-  }
-  if (!leerClave($password.value)) {
-    alert(`Clave no válida: ${$password.value}`);
-    errores.push(`Contraseña no aceptada: ${$password.value}`);
-  }
-  if (errores.length > 0) {
-    divErrores.style.flexDirection = "column";
-    divErrores.style.alignItems = "flex-start";
-    errores.map((err) => {
-      let error = document.createElement("small");
-      let errorText = document.createTextNode(`${err}`);
-      error.appendChild(errorText);
-      divErrores.append(error);
-    });
-    divErrores.classList.remove("hidden");
-  }
+  const emailValue = $email.value;
+  const passwordValue = $password.value;
 
-  function iniciarSesion() {}
-  loader.classList.remove("hidden");
-  let espera = setTimeout(() => {
-    loader.classList.add("hidden");
-  }, 3000);
+  if (!leerEmail(emailValue)) {
+    errores.push(`Email incorrecto.`);
+  }
+  if (!leerClave(passwordValue)) {
+    errores.push(`Contraseña no aceptada.`);
+  }
+  const renderizarError = () => {
+    divErrores.innerHTML = "";
+    let error = document.createElement("small");
+    error.textContent = "Alguno de los datos ingresados son incorrectos";
+    divErrores.appendChild(error);
+    divErrores.classList.remove("hidden");
+    /* $email.value = "";
+    $password.value = ""; */
+    return;
+  };
+  if (errores.length > 0) {
+    renderizarError();
+  } else {
+    divErrores.classList.add("hidden");
+    loader.classList.remove("hidden");
+    let espera = setTimeout(() => {
+      loader.classList.add("hidden");
+      const titulo = document.querySelector("main>h1");
+      const form = document.querySelector("form");
+      form.classList.remove("hidden");
+      if (validarCuenta(emailValue, passwordValue)) {
+        form.classList.add("hidden");
+        titulo.textContent = "Bienvenido al sitio 😀";
+      } else {
+        renderizarError();
+      }
+    }, 3000);
+    //clearTimeout(espera);
+  }
 });
+function validarCuenta(email, password) {
+  const encontrado = baseDeDatos.usuarios.find(
+    (usuario) => usuario.email === email
+  );
+  if (encontrado == undefined || encontrado == null) {
+    return false;
+  }
+  return encontrado.email === email && encontrado.password == password;
+}
+
+/* console.log("ahora con claves incorrectas");
+console.log(
+  `user: "steve@jobs.com","Steve", ${validarCuenta("steve@jobs.com", "Steve1")}`
+);
+console.log(
+  `user: "shanna@melissa.tv","Ervin5", ${validarCuenta(
+    "shanna@melissa.tv",
+    "Ervin3"
+  )}`
+);
+console.log(
+  `user: "nathan@yesenia.net","Floppy376", ${validarCuenta(
+    "nathan@yesenia.net",
+    "Floppy398"
+  )}`
+);
+console.log(
+  `user: "julianne.oconner@kory.org","MysuperPassword22", ${validarCuenta(
+    "julianne.oconner@kory.org",
+    "MysuperPassword22"
+  )}`
+);
+ */
